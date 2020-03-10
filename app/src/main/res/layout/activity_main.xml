@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTextViewNumb">
+
+    <TextView
+        android:id="@+id/textViewNumb"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/colorTextViewNumb"
+        android:gravity="right"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="75dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:text="I"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNumb"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="V"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/view1"
+        app:layout_constraintEnd_toStartOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/view1"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="A"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/view2"
+        app:layout_constraintEnd_toStartOf="@+id/view4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="N"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/view3"
+        app:layout_constraintEnd_toStartOf="@+id/view5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/view3"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="28dp"
+        android:text="O"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/view4"
+        app:layout_constraintEnd_toStartOf="@+id/view6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/view4"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/view6"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginRight="10dp"
+        android:text="V"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/view5"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+
+    <Button
+        android:id="@+id/btn_reset"
+        style="@style/calc_button"
+        android:layout_marginTop="12dp"
+        android:text="C"
+        app:layout_constraintLeft_toRightOf="@+id/view13"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <Button
+        android:id="@+id/btn_plus_minus"
+        style="@style/calc_button"
+        android:layout_marginTop="12dp"
+        android:text="CE"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_reset"
+        app:layout_constraintEnd_toStartOf="@+id/btn_persent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_reset" />
+
+
+    <Button
+        android:id="@+id/btn_persent"
+        style="@style/calc_button"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="12dp"
+        android:text="%"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_reset"
+        app:layout_constraintStart_toEndOf="@+id/btn_plus_minus" />
+
+
+    <Button
+
+
+        android:id="@+id/btn_division"
+        style="@style/btn_orange"
+        android:text="÷"
+        app:layout_constraintLeft_toRightOf="@+id/view12"
+        app:layout_constraintTop_toBottomOf="@id/view4" />
+
+    <Button
+        android:id="@+id/btn_seven"
+        style="@style/calc_button"
+        android:text="7"
+        app:layout_constraintLeft_toRightOf="@+id/view33"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset" />
+
+    <Button
+        android:id="@+id/btn_eight"
+        style="@style/calc_button"
+        android:text="8"
+        app:layout_constraintLeft_toRightOf="@+id/btn_seven"
+        app:layout_constraintTop_toBottomOf="@+id/btn_plus_minus" />
+
+    <Button
+        android:id="@+id/btn_nine"
+        style="@style/calc_button"
+        android:text="9"
+        app:layout_constraintLeft_toRightOf="@+id/btn_eight"
+        app:layout_constraintTop_toBottomOf="@+id/btn_persent" />
+
+    <Button
+
+
+        android:id="@+id/btnMultip"
+        style="@style/btn_orange"
+        android:text="×"
+        app:layout_constraintLeft_toRightOf="@id/view22"
+        app:layout_constraintTop_toBottomOf="@+id/btn_division" />
+
+
+    <Button
+        android:id="@+id/btn_four"
+        style="@style/calc_button"
+        android:text="4"
+        app:layout_constraintLeft_toRightOf="@+id/view43"
+        app:layout_constraintTop_toBottomOf="@+id/btn_seven" />
+
+    <Button
+        android:id="@+id/btn_five"
+        style="@style/calc_button"
+        android:text="5"
+        app:layout_constraintLeft_toRightOf="@+id/btn_four"
+        app:layout_constraintTop_toBottomOf="@+id/btn_eight" />
+
+
+    <Button
+        android:id="@+id/btn_six"
+        style="@style/calc_button"
+        android:text="6"
+        app:layout_constraintLeft_toRightOf="@+id/btn_five"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nine" />
+
+    <Button
+
+
+        android:id="@+id/btnMinus"
+        style="@style/btn_orange"
+        android:text="-"
+        app:layout_constraintLeft_toRightOf="@+id/view32"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultip" />
+
+
+    <Button
+        android:id="@+id/btn_one"
+        style="@style/calc_button"
+        android:text="1"
+        app:layout_constraintLeft_toRightOf="@+id/view53"
+        app:layout_constraintTop_toBottomOf="@+id/btn_four" />
+
+    <Button
+        android:id="@+id/btn_two"
+        style="@style/calc_button"
+        android:text="2"
+        app:layout_constraintLeft_toRightOf="@+id/btn_one"
+        app:layout_constraintTop_toBottomOf="@+id/btn_five" />
+
+    <Button
+        android:id="@+id/btn_three"
+        style="@style/calc_button"
+        android:text="3"
+        app:layout_constraintLeft_toRightOf="@+id/btn_two"
+        app:layout_constraintTop_toBottomOf="@+id/btn_six" />
+
+
+    <TextView
+        android:id="@+id/view12"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="I"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_persent"
+        app:layout_constraintBottom_toTopOf="@+id/view22"
+        app:layout_constraintLeft_toRightOf="@+id/btn_persent" />
+
+    <TextView
+        android:id="@+id/view22"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="V"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/view32"
+        app:layout_constraintLeft_toRightOf="@+id/btn_persent"
+        app:layout_constraintTop_toBottomOf="@+id/view12" />
+
+    <TextView
+        android:id="@+id/view32"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/view42"
+        app:layout_constraintLeft_toRightOf="@+id/btn_nine"
+        app:layout_constraintTop_toBottomOf="@+id/view22" />
+
+    <TextView
+        android:id="@+id/view42"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="N"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/view52"
+        app:layout_constraintLeft_toRightOf="@+id/btn_persent"
+        app:layout_constraintTop_toBottomOf="@+id/view32" />
+
+    <TextView
+        android:id="@+id/view52"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="O"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/view62"
+        app:layout_constraintLeft_toRightOf="@+id/btn_three"
+        app:layout_constraintTop_toBottomOf="@+id/view42" />
+
+    <TextView
+        android:id="@+id/view62"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="V"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_dot"
+        app:layout_constraintLeft_toRightOf="@+id/btn_dot"
+        app:layout_constraintTop_toBottomOf="@+id/view52" />
+
+
+    <Button
+        android:id="@+id/btnPlus"
+        style="@style/btn_orange"
+        android:text="+"
+        app:layout_constraintLeft_toRightOf="@+id/view52"
+        app:layout_constraintTop_toBottomOf="@id/btnMinus" />
+
+
+    <Button
+        android:id="@+id/btn_zero"
+        style="@style/calc_button"
+        android:layout_width="151dp"
+        android:text="0"
+        app:layout_constraintLeft_toRightOf="@+id/view63"
+        app:layout_constraintTop_toBottomOf="@+id/btn_one" />
+
+    <Button
+        android:id="@+id/btn_dot"
+        style="@style/calc_button"
+        android:layout_weight="2.5"
+        android:text="."
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_zero"
+        app:layout_constraintLeft_toRightOf="@+id/btn_zero" />
+
+    <Button
+        android:id="@+id/btn_equally"
+        style="@style/btn_orange"
+        android:layout_weight="2.5"
+        android:text="="
+        app:layout_constraintLeft_toRightOf="@id/view62"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus" />
+
+
+    <TextView
+        android:id="@+id/view13"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="I"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_reset"
+        app:layout_constraintBottom_toTopOf="@+id/view23"
+        app:layout_constraintRight_toLeftOf="@+id/btn_reset"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <TextView
+        android:id="@+id/view23"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="V"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/view33"
+        app:layout_constraintRight_toLeftOf="@+id/btn_reset"
+        app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+    <TextView
+        android:id="@+id/view33"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/view43"
+        app:layout_constraintRight_toLeftOf="@+id/btn_seven"
+        app:layout_constraintTop_toBottomOf="@+id/view23" />
+
+    <TextView
+        android:id="@+id/view43"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="N"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/view53"
+        app:layout_constraintRight_toLeftOf="@+id/btn_four"
+        app:layout_constraintTop_toBottomOf="@+id/view33" />
+
+    <TextView
+        android:id="@+id/view53"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="O"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/view63"
+        app:layout_constraintRight_toLeftOf="@+id/btn_one"
+        app:layout_constraintTop_toBottomOf="@+id/view43" />
+
+    <TextView
+        android:id="@+id/view63"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="V"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/btn_zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_zero"
+        app:layout_constraintTop_toBottomOf="@+id/view53" />
+
+
+    <TextView
+        android:id="@+id/view14"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:text="I"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/view24"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_zero" />
+
+    <TextView
+        android:id="@+id/view24"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="V"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/view14"
+        app:layout_constraintEnd_toStartOf="@+id/view34"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view14" />
+
+    <TextView
+        android:id="@+id/view34"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="A"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/view14"
+        app:layout_constraintEnd_toStartOf="@+id/view44"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view24" />
+
+    <TextView
+        android:id="@+id/view44"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="N"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/view14"
+
+        app:layout_constraintEnd_toStartOf="@+id/view54"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view34" />
+
+    <TextView
+        android:id="@+id/view54"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="O"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/view14"
+        app:layout_constraintEnd_toStartOf="@+id/view64"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view44" />
+
+    <TextView
+        android:id="@+id/view64"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="V"
+        android:textColor="@color/colorTextInVeiwNumb"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/view14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view54" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
